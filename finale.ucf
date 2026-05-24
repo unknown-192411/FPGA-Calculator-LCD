@@ -1,0 +1,30 @@
+# ============================================================
+# User Constraints File (UCF) — FPGA-Based Calculator with LCD
+# Target Board : Numato Lab Elbert V2
+# FPGA         : Xilinx Spartan-3A XC3S50A TQG144
+# Clock        : 12 MHz (on-board oscillator)
+# Tool         : Xilinx ISE 14.7
+# ============================================================
+
+# --- System Clock (12 MHz on-board oscillator) ---
+NET "clk" LOC = "P129" | IOSTANDARD = LVCMOS33;
+NET "clk" TNM_NET = clk;
+TIMESPEC TS_clk = PERIOD "clk" 83.33 ns HIGH 50%;
+
+# --- UART TX to ESP32 RX ---
+NET "uart_tx_pin" LOC = "P141" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+
+# --- Key-Active Indicator LED (D1) ---
+NET "led_ind" LOC = "P46" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+
+# --- Keypad Row Inputs (with internal PULLUP) ---
+NET "kp_row[0]" LOC = "P10" | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "kp_row[1]" LOC = "P11" | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "kp_row[2]" LOC = "P7"  | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "kp_row[3]" LOC = "P8"  | IOSTANDARD = LVCMOS33 | PULLUP;
+
+# --- Keypad Column Outputs (active-low drive) ---
+NET "kp_col[0]" LOC = "P3" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+NET "kp_col[1]" LOC = "P5" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+NET "kp_col[2]" LOC = "P4" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+NET "kp_col[3]" LOC = "P6" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
