@@ -212,6 +212,6 @@ The ESP32 solves all of this in firmware using the `LiquidCrystal_I2C` Arduino l
 
 ## 👨‍💻 Authors
 
-**Mahendra Prajapati** · **Rutuja Chikne** · **Kavish Nishad** · **Nihal Vimal**  
+**Mahendra Prajapati**
 Electronics & Telecommunication Engineering — RGIT Mumbai  
 Academic Year 2025–26 · University of Mumbai
