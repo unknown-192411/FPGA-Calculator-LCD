@@ -16,10 +16,8 @@
 
 | Name | Roll No |
 |------|---------|
-| Rutuja Vasant Chikne | A617 |
-| Kavish Ashok Nishad | A645 |
 | Mahendra Prajapati | A650 |
-| Nihal Ramesh Vimal | A655 |
+
 
 **Guide:** Prof. Rahmani Akhtar  
 **Department:** Electronics & Telecommunication Engineering, RGIT Mumbai  
